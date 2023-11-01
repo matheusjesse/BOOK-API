@@ -5,25 +5,25 @@ using Microsoft.AspNetCore.Mvc;
 namespace book_api.Controllers
 {
     [ApiController]
-    [Route("authors")]
-    public class AuthorController : Controller
+    [Route("books")]
+    public class BooksController : Controller
     {
         protected readonly IBookRepository _repository;
-        public AuthorController(IBookRepository repository)
+        public BooksController(IBookRepository repository)
         {
             _repository = repository;
         }
 
         [HttpPost]
-        public IActionResult Add ([FromBody] Author author)
+        public IActionResult Add ([FromBody] Book book)
         {
-            return Created("", _repository.AddAuthor(author));
+            return Created("", _repository.AddBook(book));
         }
 
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok(_repository.GetAuthors());
+            return Ok(_repository.GetBooks());
         }
     }
 }
