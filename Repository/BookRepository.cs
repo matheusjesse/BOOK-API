@@ -21,5 +21,17 @@ namespace book_api.Repository
         {
             return _context.Authors;
         }
+
+        public Book AddBook(Book book)
+        {
+            _context.Books.Add(book);
+            _context.SaveChanges();
+            return book;
+        }
+
+        public IEnumerable<Book> GetBooks()
+        {
+            return _context.Books;
+        }
     }
 }
