@@ -1,4 +1,4 @@
-namespace book_api.models
+namespace BOOK_API.models
 {
     using System.ComponentModel.DataAnnotations;
     

@@ -1,8 +1,8 @@
-using book_api.Repository;
-using book_api.models;
+using BOOK_API.Repository;
+using BOOK_API.models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace book_api.Controllers
+namespace BOOK_API.Controllers
 {
     [ApiController]
     [Route("books")]

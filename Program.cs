@@ -1,4 +1,4 @@
-using book_api.Repository;
+using BOOK_API.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 

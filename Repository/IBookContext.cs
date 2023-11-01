@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using book_api.models;
+using BOOK_API.models;
 
-namespace book_api.Repository
+namespace BOOK_API.Repository
 {
     public interface IBookContext
     {
