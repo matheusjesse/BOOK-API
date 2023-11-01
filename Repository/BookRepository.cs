@@ -1,4 +1,5 @@
 using BOOK_API.models;
+using BOOK_API.DTO;
 
 namespace BOOK_API.Repository
 {
@@ -29,9 +30,15 @@ namespace BOOK_API.Repository
             return book;
         }
 
-        public IEnumerable<Book> GetBooks()
+        public IEnumerable<BookDTO> GetBooks()
         {
-            return _context.Books;
+            var bookretorno = _context.Books.Select(b => new BookDTO{
+                BookId = b.BookId,
+                Title = b.Title,
+                ReleaseYear = b.ReleaseYear,
+                AuthorName = b.Author.Name
+            }).ToList();
+            return bookretorno;
         }
     }
 }

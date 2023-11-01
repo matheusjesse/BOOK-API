@@ -1,4 +1,5 @@
 using BOOK_API.models;
+using BOOK_API.DTO;
 
 namespace BOOK_API.Repository
 {
@@ -8,6 +9,6 @@ namespace BOOK_API.Repository
         IEnumerable<Author> GetAuthors();
 
         Book AddBook(Book book);
-        IEnumerable<Book> GetBooks();
+        IEnumerable<BookDTO> GetBooks();
     }
 }
