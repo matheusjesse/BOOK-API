@@ -7,5 +7,7 @@ namespace book_api.models
         [Key]
         public int AuthorId {get; set;}
         public string Name {get; set;}
+        ICollection<Book>? books {get; set;} = null!;
+
     }
 }
