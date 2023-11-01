@@ -15,7 +15,7 @@ public class BookContext : DbContext, IBookContext
     {
         if(!optionsBuilder.IsConfigured)
         {
-            var connectionString = "Server=127.0.0.1;Database=BookStore;User=SA;Password=Trybe12345*";
+            var connectionString = "Server=127.0.0.1;Database=BookStore;User=SA;Password=Trybe12345*;TrustServerCertificate=True";
             optionsBuilder.UseSqlServer(connectionString);
         }
     }
