@@ -11,5 +11,6 @@ namespace book_api.models
         public int ReleaseYear { get; set; }
         [ForeignKey("AuthorID")]
         public int AuthorId { get; set; }
+        public Author? Author { get; set; }
     }
 }
